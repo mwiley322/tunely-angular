@@ -7,7 +7,21 @@ console.log('connected to app.js');
     var vm = this;
     vm.newAlbum = {};
     vm.newAlbum = {
-      name: 'All Eyes on Me',
-      artistName: 'Tupac'
+      name: 'Speak for Yourself',
+      artistName: 'Imogen Heap'
     };
+    vm.albums = [
+      {
+        name: 'VaVaVoom',
+        artistName: 'Bassnectar'
+      },
+      {
+        name: 'Dive',
+        artistName: 'Tycho'
+      },
+      {
+        name: 'Rumors',
+        artistName: 'Fleetwood Mac'
+      }
+    ];
   }

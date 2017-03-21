@@ -28,7 +28,28 @@
 
   <div class="container" ng-controller="AlbumsIndexController as albumsIndexCtrl">
     <p>
-      <b>{{ albumsIndexCtrl.newAlbum}}</b>
+      <b>{{ albumsIndexCtrl.newAlbum.name}} by {{ albumsIndexCtrl.newAlbum.artistName}}</b>
     </p>
+    <input type="text" class="form-control" placeholder="New album name" ng-model="albumsIndexCtrl.newAlbum.name">
+    <input type="text" class="form-control" placeholder="New album artist" ng-model="albumsIndexCtrl.newAlbum.artistName">
+
+    <div class="col-lg-6 col-md-6 col-xs-12 singleAlbumDisplay text-center" ng-repeat="album in albumsIndexCtrl.albums">
+      <div class="col-lg-12 col-md-12 col-xs-12">
+        <h4>{{ album.name }}</h4>
+      </div>
+      <div class="col-lg-12 col-md-12 col-xs-12">
+        {{ album.artistName }}
+      </div>
+      <div class="col-lg-12 col-md-12 col-xs-12">
+        {{ album.releaseDate }}
+      </div>
+      <div class="col-lg-12 col-md-12 col-xs-12">
+        {{ album.genres }}
+      </div>
+      <div class="col-lg-12 col-md-12 col-xs-12">
+        {{ album.songs }}
+      </div>
+    </div>
+
   </div>
 </html>

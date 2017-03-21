@@ -8,6 +8,13 @@
   height: 350px;
 }
 
+.singleAlbumDisplay {
+  height: 16vw;
+  border: 1px solid #ddd;
+  margin-top: 1vw;
+}
+
+
 .inline-header {
   display: inline-block;
   vertical-align: baseline;
