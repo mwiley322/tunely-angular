@@ -1,31 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="tunelyApp">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>tunely</title>
+    <title>Tunely</title>
 
     <!-- STYLESHEETS -->
-    <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/styles/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../public/styles/styles.css">
 
     <!-- VENDOR SCRIPTS -->
-    <script src="/vendor/angular/angular.min.js"></script>
-    <script src="/vendor/angular-route/angular-route.min.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
 
     <!-- APPLICATION SCRIPTS -->
-    <script src="/scripts/app.js"></script>
+    <script src="../public/scripts/app.js"></script>
 
   </head>
   <body>
     <div class="jumbotron">
       <div class="container">
-        <h1>Welcome to tunely</h1>
+        <h1>Welcome to Tunely</h1>
         <p>Your music binder!</p>
       </div>
     </div>
   </body>
 
+  <div class="container" ng-controller="AlbumsIndexController as albumsIndexCtrl">
+    <p>
+      <b>{{ albumsIndexCtrl.newAlbum}}</b>
+    </p>
+  </div>
 </html>
