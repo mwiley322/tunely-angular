@@ -55,4 +55,15 @@ angular
       console.log('There was an error deleting the data: ', error);
     }
 
+    vm.editAlbum = function (album) {
+      $http({
+        method: 'PUT',
+        url: '/api/albums/'+album._id,
+        data: album
+      }).then(function successEditedAlbum(res) {
+        //the album will update automatically in the view
+      }, function errorEditingAlbum(err) {
+        console.log('There was an error editing the album: ', error);
+      });
+    }
   }
