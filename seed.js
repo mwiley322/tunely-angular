@@ -1,32 +1,50 @@
-// This file allows us to seed our application with data
-// simply run: `node seed.js` from the root of this project folder.
-
 var db = require("./models");
 
 var albumList =[];
 albumList.push({
-              artistName: 'Nine Inch Nails',
-              name: 'The Downward Spiral',
-              releaseDate: '1994, March 8',
-              genres: [ 'industrial', 'industrial metal' ]
+                name: 'Vava Voom',
+                artistName: 'Bassnectar',
+                releaseDate: 'April 10, 2012',
+                genres: [
+                  'Dubstep', 'Electronica', 'Glitch', 'Bass music', 'Trip hop'
+                ]
+                // songs: [
+                //   'Vava Voom', 'Empathy', 'Ugly', 'Upside Down'
+                // ]
             });
 albumList.push({
-              artistName: 'Metallica',
-              name: 'Metallica',
-              releaseDate: '1991, August 12',
-              genres: [ 'heavy metal' ]
+              name: 'Speak for Yourself',
+              artistName: 'Imogen Heap',
+              releaseDate: 'July 18, 2005',
+              genres: [
+                'Pop', 'Rock', 'Electronica', 'Alternative rock'
+              ]
+              // songs: [
+              //   'Headlock', 'Have You Got it in You?', 'Goodnight and Go', 'Loose Ends',
+              //   'Hide and Seek', 'Daylight Robbery', 'The Walk', 'Clear the Area'
+              // ]
             });
 albumList.push({
-              artistName: 'The Prodigy',
-              name: 'Music for the Jilted Generation',
-              releaseDate: '1994, July 4',
-              genres: [ 'electronica', 'breakbeat hardcore', 'rave', 'jungle' ]
+              name: 'Dive',
+              artistName: 'Tycho',
+              releaseDate: 'November 8, 2011',
+              genres: [
+                 'Downtempo', 'Chill-out', 'Chillwave', 'Instrumental', 'Indie'
+              ]
+              // songs: [
+              //   'Daydream', 'A Walk', 'Hours'
+              // ]
             });
 albumList.push({
-              artistName: 'Johnny Cash',
-              name: 'Unchained',
-              releaseDate: '1996, November 5',
-              genres: [ 'country', 'rock' ]
+              name: 'Rumors',
+              artistName: 'Fleetwood Mac',
+              releaseDate: 'February 4, 1977',
+              genres: [
+                'Rock', 'Pop', 'Rock and roll', 'Pop rock', 'Soft rock'
+              ]
+              // songs: [
+              //   'Dreams', 'Never Going Back Again', 'The Chain', 'You Make Loving Fun', 'Go Your Own Way', 'Gold Dust Woman'
+              // ]
             });
 
 var sampleSongs = [];

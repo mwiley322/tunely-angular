@@ -10,7 +10,7 @@ var bodyParser = require('body-parser');
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 // need to add this so that we can accept request payloads from Angular
-app.use(bodyParser.json()); 
+app.use(bodyParser.json());
 
 // We'll serve jQuery and bootstrap from a local bower cache avoiding CDNs
 // We're placing these under /vendor to differentiate them from our own assets
@@ -43,12 +43,14 @@ app.get('/templates/:name', function templates(req, res) {
 
 app.get('/api', controllers.api.index);
 
+//ALBUM CONTROLLERS
 app.get('/api/albums', controllers.albums.index);
 app.get('/api/albums/:albumId', controllers.albums.show);
 app.post('/api/albums', controllers.albums.create);
 app.delete('/api/albums/:albumId', controllers.albums.destroy);
 app.put('/api/albums/:albumId', controllers.albums.update);
 
+//SONG CONTROLLERS
 app.get('/api/albums/:albumId/songs', controllers.albumsSongs.index);
 app.post('/api/albums/:albumId/songs', controllers.albumsSongs.create);
 app.delete('/api/albums/:albumId/songs/:songId', controllers.albumsSongs.destroy);
@@ -66,5 +68,5 @@ app.get('*', function homepage (req, res) {
 
 // listen on port 3000
 app.listen(process.env.PORT || 3000, function () {
-  console.log('Express server is running on http://localhost:3000/');
+  console.log('TUNES BLASTIN on http://localhost:3000/');
 });
