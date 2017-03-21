@@ -10,19 +10,26 @@ nav {
   border-radius: 0 !important;
 }
 
+body {
+  background-color: #c2c2c2;
+}
+
 .jumbotron .container {
   height: 350px;
 }
 
 .singleAlbumDisplay {
   height: 16vw;
-  border: 1px solid #ddd;
+  border: 1px solid black;
   margin-top: 1vw;
+  background-color: white;
 }
 
 i {
   color: white;
 }
+
+
 .songShow, .genreShow {
   display: inline-block;
 }
