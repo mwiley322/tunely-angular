@@ -1,9 +1,15 @@
-.jumbotron {
+header {
   background-image: url(../images/background1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   color: #EEE;
+  height: 20vw;
 }
+
+nav {
+  border-radius: 0 !important;
+}
+
 .jumbotron .container {
   height: 350px;
 }
@@ -14,6 +20,9 @@
   margin-top: 1vw;
 }
 
+i {
+  color: white;
+}
 .songShow, .genreShow {
   display: inline-block;
 }
