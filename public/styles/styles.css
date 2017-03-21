@@ -25,6 +25,10 @@ body {
   background-color: white;
 }
 
+.createNew {
+  margin: 7px 6px;
+}
+
 i {
   color: white;
 }

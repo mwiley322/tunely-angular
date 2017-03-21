@@ -12,6 +12,7 @@
 
     <!-- VENDOR SCRIPTS -->
     <script src="vendor/angular/angular.js"></script>
+    <script src="path/to/angular-route.js"></script>
 
     <!-- APPLICATION SCRIPTS -->
     <script src="/scripts/app.js"></script>
@@ -32,10 +33,11 @@
           <input type="text" ng-model="searchText" class="form-control" placeholder="Search for an album">
         </div>
       </form>
+      <button class='btn btn-info pull-right createNew' ng-hide="creating" ng-click="creating = true"> Add New Album</button>
     </nav>
 
     <div class="container" ng-controller="AlbumsIndexController as albumsIndexCtrl">
-      <form class="form-horizontal" ng-submit="albumsIndexCtrl.createAlbum()">
+      <form class="form-horizontal" ng-show="creating" ng-submit="albumsIndexCtrl.createAlbum()">
         <fieldset>
 
           <!-- Text input-->
@@ -74,7 +76,7 @@
           <div class="form-group">
             <label class="col-md-4 control-label">Save Album</label>
             <div class="col-md-4">
-              <button class="btn btn-primary">Submit</button>
+              <button class="btn btn-primary" ng-click="creating = false">Submit</button>
             </div>
           </div>
         </fieldset>
