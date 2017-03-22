@@ -1,0 +1,31 @@
+
+  <div class="col-lg-6 col-md-6 col-xs-12 singleAlbumDisplay text-center" ng-repeat="album in albumsIndexCtrl.albums | orderBy: 'name' | filter: searchText">
+    <div class="row">
+      <div class="col-lg-3">
+        <img class="img-responsive" src="{{album.imageUrl}}">
+      </div>
+      <div class="col-lg-9 col-md-9 col-xs-9">
+        <div class="col-lg-12">
+          <input ng-show="editing" ng-model="album.name" type="text" class="form-control input-md">
+          <h4 ng-hide="editing">{{ album.name }}</h4>
+        </div>
+        <div class="col-lg-12 col-md-12 col-xs-12">
+          <input ng-show="editing" ng-model="album.artistName" type="text" class="form-control input-md">
+          <h5 ng-hide="editing">{{ album.artistName }}</h5>
+        </div>
+        <div class="col-lg-9 col-md-12 col-xs-12">
+          <input ng-show="editing" ng-model="album.releaseDate" type="text" class="form-control input-md">
+          <p ng-hide="editing">{{ album.releaseDate }}</p>
+        </div>
+        <div class="col-lg-9 col-md-12 col-xs-12">
+          <input ng-show="editing" ng-model="album.genres" type="text" class="form-control input-md">
+          <p class="genreShow" ng-hide="editing" ng-repeat="genre in album.genres">{{ genre }} </p>
+        </div>
+        <div class="row">
+          <button class='btn btn-xs btn-info' ng-hide="editing" ng-click="editing = true"><i class="glyphicon glyphicon-pencil"></i></button>
+          <button class='btn btn-xs btn-success' ng-show="editing" ng-click="albumsIndexCtrl.editAlbum(album); editing = false">Save Changes</button>
+          <button class='btn btn-xs btn-danger' ng-click="albumsIndexCtrl.deleteAlbum(album)"><i class="glyphicon glyphicon-remove"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
