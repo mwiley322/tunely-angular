@@ -1,6 +1,3 @@
-console.log("sanity check");
-//app.js is now index for controllers
-
 angular
   .module('tunelyApp', ['ngRoute'])
   .config(config);
@@ -14,11 +11,11 @@ angular
       controller: 'AlbumsIndexController',
       controllerAs: 'albumsIndexCtrl'
     })
-    // .when('/:id', {
-    //   templateUrl: '/templates/albums-show',
-    //   controller: 'AlbumsShowController',
-    //   controllerAs: 'albumsShowCtrl'
-    // })
+    .when('/albums/:id', {
+      templateUrl: '/templates/albumShow',
+      controller: 'AlbumShowController',
+      controllerAs: 'albumShowCtrl'
+    })
     $locationProvider.html5Mode({
       enabled: true,
       requireBase: false

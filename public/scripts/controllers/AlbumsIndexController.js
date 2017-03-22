@@ -2,12 +2,10 @@ angular
   .module('tunelyApp')
   .controller('AlbumsIndexController', AlbumsIndexController);
 
-console.log('sanitttyyyy');
   AlbumsIndexController.$inject = ['$http'];
   function AlbumsIndexController( $http ) {
     var vm = this;
     vm.newAlbum = {};
-    console.log('IN ALBUMS CONTROLLER FUNCTION');
 
     vm.getAllAlbums = function() {
       $http({
